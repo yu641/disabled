@@ -26,7 +26,7 @@ tab_1, tab_2, tab_3 = st.tabs(['지역','성별','연령대'])
 
 # 시도별 장애인구 바차트
 with tab_1:
-    st.write('## 시도별 장애인 인구 수')
+    st.write('시도별 장애인 인구 수')
     fig = px.bar(
         data_frame = df2,
         x='전체',
@@ -39,7 +39,7 @@ with tab_1:
 
 # 성별에 따른 분류 파이차트
 with tab_2:
-    st.write('## 성별별 장애인 인구 수')
+    st.write('성별별 장애인 인구 수')
     fig=px.pie(
         values = [2641896, 1529806],
         names = ['남성','여성']
@@ -53,7 +53,7 @@ with tab_2:
 
 # 연령에 따른 분류 바차트
 with tab_3:
-    st.write('## 연령대별 장애인 인구 수')
+    st.write('연령대별 장애인 인구 수')
     fig = px.bar(
         data_frame = df3,
         x='연령별',
@@ -68,7 +68,7 @@ tab_1, tab_2 = st.tabs(['장애정도','장애유형'])
 
 # 장애 정도에 따른 분류 파이차트
 with tab_1:
-    st.write('## 장애 정도별 인구 수')
+    st.write('장애 정도별 인구 수')
     fig=px.pie(
         values = [978634,1663262],
         names = ['심한장애','심하지 않은 장애']
@@ -81,6 +81,7 @@ with tab_1:
     st.plotly_chart(fig)
 
 with tab_2:
+    st.write('장애 유형별 인구 수')
     fig=px.pie(
         values = [1153501, 248360, 432854, 22830, 229780,240546, 42744, 104197, 108623, 4933, 11029, 15634, 2757, 17117, 6991],
         names = ['지체','시각','청각','언어','지적','뇌병변','자폐성','정신','신장','심장','호흡기','간','안면','장루ㆍ요루','뇌전증']
@@ -91,3 +92,5 @@ with tab_2:
     )
     fig.show()
     st.plotly_chart(fig)
+
+st.caption('연령대별, 유형별 장애인 인구 출처: KOSIS 전국 연령별,장애유형별,성별 등록장애인수, 2023년')
