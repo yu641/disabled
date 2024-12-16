@@ -39,7 +39,7 @@ with col1:
     
 
 # 장애인의 학력 파이차트(25-65세)
-with col1:
+with col2:
     st.write('장애인의 학력(25-65세)')
     fig=px.pie(
         values = [1.7, 9.5, 12.2, 47.5, 29.0],
