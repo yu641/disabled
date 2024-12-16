@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 
 gdf_korea_sido = gpd.read_file('sido.json')
 
-df = pd.read_excel("disabledperson.xlsx")
-df2 = pd.read_excel("disabledperson2.xlsx")
-df3 = pd.read_excel("disabledperson3.xlsx")
-df4 = pd.read_excel("disabledperson4.xlsx")
-df5 = pd.read_excel("C:disabledperson5.xlsx")
-df6 = pd.read_excel("C:disabledperson6.xlsx")
+df = pd.read_excel("disabledperson.xlsx",encoding='UTF-8')
+df2 = pd.read_excel("disabledperson2.xlsx",encoding='UTF-8')
+df3 = pd.read_excel("disabledperson3.xlsx",encoding='UTF-8')
+df4 = pd.read_excel("disabledperson4.xlsx",encoding='UTF-8')
+df5 = pd.read_excel("C:disabledperson5.xlsx",encoding='UTF-8')
+df6 = pd.read_excel("C:disabledperson6.xlsx",encoding='UTF-8')
 
 korea_5179 = gdf_korea_sido.to_crs(epsg=5179,inplace=False)
 
