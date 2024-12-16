@@ -25,7 +25,7 @@ col1, col2 = st.columns([1,1])
 
 # 장애인의 학력 파이차트(전체)
 with col1:
-    st.write('장애인의 학력')
+    st.write('장애인의 학력(전연령)')
     fig=px.pie(
         values = [8.5, 26.8, 16.3, 31.0, 17.4],
         names = ['무학','초등학교','중학교','고등학교','대학이상']
@@ -40,7 +40,7 @@ with col1:
 
 # 장애인의 학력 파이차트(25-65세)
 with col1:
-    st.write('장애인의 학력')
+    st.write('장애인의 학력(25-65세)')
     fig=px.pie(
         values = [1.7, 9.5, 12.2, 47.5, 29.0],
         names = ['무학','초등학교','중학교','고등학교','대학이상']
@@ -54,9 +54,9 @@ with col1:
 
 st.write('')
 
-col1, col2, col3 = st.columns([1,1,1])
+tab_1, tab_2, tab_3 = st.tabs(['특수학교','특수학교 학생','특수학교 교원'])
 # 시도별 특수학교 수 바차트
-with col1:
+with tab_1:
     st.write('특수학교 수')
     fig = px.bar(
         data_frame = df4,
@@ -69,7 +69,7 @@ with col1:
     st.plotly_chart(fig)
 
 # 시도별 특수학교 학생 수 바차트
-with col2:
+with tab_2:
     st.write('특수학교 학생 수')
     fig = px.bar(
         data_frame = df4,
@@ -82,7 +82,7 @@ with col2:
     st.plotly_chart(fig)
 
 # 시도별 특수학교 교원 수 바차트
-with col3:
+with tab_3:
     st.write('특수학교 교원 수')
     fig = px.bar(
         data_frame = df4,
