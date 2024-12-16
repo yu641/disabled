@@ -138,7 +138,7 @@ with tab_2:
 with tab_3:
     st.write('#교육수준별 경제활동 현황')
     st.write('교육수준별 경제활동 인구 수')
-    ig = px.bar(
+    fig = px.bar(
         data_frame = df6,
         x=['취업자', '실업자', '비경제활동인구'],
         y='교육정도별',
