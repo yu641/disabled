@@ -1,6 +1,6 @@
 streamlit
 pandas
 geopandas
-matplotlib
+matplotlib.pyplot
 plotly
 openpyxl
