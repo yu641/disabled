@@ -10,8 +10,8 @@ df = pd.read_excel("disabledperson.xlsx", engine='openpyxl')
 df2 = pd.read_excel("disabledperson2.xlsx", engine='openpyxl')
 df3 = pd.read_excel("disabledperson3.xlsx", engine='openpyxl')
 df4 = pd.read_excel("disabledperson4.xlsx", engine='openpyxl')
-df5 = pd.read_excel("C:disabledperson5.xlsx", engine='openpyxl')
-df6 = pd.read_excel("C:disabledperson6.xlsx", engine='openpyxl')
+df5 = pd.read_excel("disabledperson5.xlsx", engine='openpyxl')
+df6 = pd.read_excel("disabledperson6.xlsx", engine='openpyxl')
 
 korea_5179 = gdf_korea_sido.to_crs(epsg=5179,inplace=False)
 
