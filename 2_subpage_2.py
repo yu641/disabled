@@ -92,8 +92,9 @@ with tab_3:
         orientation = 'h'
         )
     fig.show()
+    st.plotly_chart(fig)
 st.write('')
-st.plotly_chart(fig)
+
 
 ###============장애인의 경제활동 현황============###
 st.title('장애인 경제활동 현황')
