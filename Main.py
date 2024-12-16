@@ -26,7 +26,7 @@ gdf_dp=pd.concat([gdf_korea_sido, dp], axis=1) #시군구별 장애인 인구 �
 ax = gdf_dp.plot(column='총장애인', legend=True, cmap="Reds", k=7)
 ax.set_axis_off()
 plt.show()
-st.plotly_chart(ax)
+st.plotly_Chart(ax)
 st.title('')
 
 st.header('시군구별 장애인 비율 [단위: %]')
@@ -35,5 +35,5 @@ ax = gdf_dp_rate.plot(column='장애인구비율', legend=True, cmap="Reds", k=7
 ax.set_axis_off()
 ax.set_title("시군구별 장애인 비율 [단위:%]")
 plt.show()
-st.plotly_chart(ax)
+st.plotly_Chart(ax)
 
