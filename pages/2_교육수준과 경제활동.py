@@ -20,7 +20,7 @@ dp=df[['총장애인']] #장애인 인구수
 dp_rate=df[['장애인구비율']] #장애인구비율=장애인인구수/총인구수*100
 
 ###============장애인의 교육수준============###
-st.title('장애인의 교육 현황')
+st.subheader('장애인의 교육 현황')
 col1, col2 = st.columns([1,1])
 
 # 장애인의 학력 파이차트(전체)
@@ -116,7 +116,7 @@ with tab_1:
 ## 지역별
 
 with tab_2:
-    st.write('# 지역별 경제활동 현황')
+    st.subheader('지역별 경제활동 현황')
     st.write('지역별 경제활동 인구 수')
     fig = px.bar(
         data_frame = df5,
@@ -136,7 +136,7 @@ with tab_2:
 
 ## 교육수준별
 with tab_3:
-    st.write('# 교육수준별 경제활동 현황')
+    st.subheader('교육수준별 경제활동 현황')
     st.write('교육수준별 경제활동 인구 수')
     fig = px.bar(
         data_frame = df6,
@@ -155,3 +155,7 @@ with tab_3:
         ) # 교육수준별 경제활동인구비율
     fig.show()
     st.plotly_chart(fig)
+
+st.caption('장애인의 교육수준 출처: 보건복지부 2023년 장애인 실태조사 결과')
+st.caption('지역별 특수학교 출처: 교육부 국립특수교육원 2023년 특수교육통계')
+st.caption('장애인의 경제활동 출처: KOSIS 2023년 장애인 경제활동상태')
