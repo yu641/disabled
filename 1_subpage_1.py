@@ -28,6 +28,7 @@ with col_1:
     ax = gdf_dp.plot(column='총장애인', legend=True, cmap="Reds", k=7)
     ax.set_axis_off()
     plt.show()
+    st.plotly_chart(fig)
 
 with col_2:
     st.write('## 시군구별 장애인 비율 [단위:%]')
@@ -35,6 +36,7 @@ with col_2:
     ax = gdf_dp_rate.plot(column='장애인구비율', legend=True, cmap="Reds", k=7)
     ax.set_axis_off()
     plt.show()
+    st.plotly_chart(fig)
 
 ###============장애인구 분포============###
 st.title('## 장애인 인구 유형별 분포')
@@ -51,6 +53,7 @@ with tab_1:
         orientation = 'h'
         )   
     fig.show()
+    st.plotly_chart(fig)
 
 # 성별에 따른 분류 파이차트
 with tab_2:
@@ -64,6 +67,7 @@ with tab_2:
         textinfo = 'label+percent+value'
     )
     fig.show()
+    st.plotly_chart(fig)
 
 # 연령에 따른 분류 바차트
 with tab_3:
@@ -74,6 +78,7 @@ with tab_3:
         y='계',
         )
     fig.show()
+    st.plotly_chart(fig)
 
 ###============장애의 구분============###
 st.title('장애의 유형별 분포')
@@ -91,3 +96,16 @@ with tab_1:
         textinfo = 'label+percent+value'
     )
     fig.show()
+    st.plotly_chart(fig)
+
+with tab_2:
+    fig=px.pie(
+        values = [1153501, 248360, 432854, 22830, 229780,240546, 42744, 104197, 108623, 4933, 11029, 15634, 2757, 17117, 6991],
+        names = ['지체','시각','청각','언어','지적','뇌병변','자폐성','정신','신장','심장','호흡기','간','안면','장루ㆍ요루','뇌전증']
+               )
+    fig.update_traces(
+        textposition = 'outside',
+        textinfo = 'label+percent+value'
+    )
+    fig.show()
+    st.plotly_chart(fig)
