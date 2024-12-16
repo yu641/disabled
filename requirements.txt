@@ -4,4 +4,4 @@ geopandas
 matplotlib
 plotly
 openpyxl
-warning
+warnings
