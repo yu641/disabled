@@ -4,9 +4,6 @@ import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 
-import warnings
-warnings.filterwarnings("ignore")
-
 gdf_korea_sido = gpd.read_file('sido.json')
 
 df = pd.read_excel("disabledperson.xlsx", engine='openpyxl')
@@ -41,4 +38,5 @@ ax.set_axis_off()
 plt.show()
 st.pyplot()
 
-st.caption('출처: KOSIS 시도별,장애유형별,성별 등록장애인수')
+st.caption('장애인 인구 출처: KOSIS 시도별,장애유형별,성별 등록장애인수, 2023년')
+st.caption('인구 출처: 행정안전부 행정동별 주민등록 인구 및 세대현황, 2023년')
