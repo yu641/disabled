@@ -4,16 +4,14 @@ import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 
-plt.rcParams['font.family'] ='Malgun Gothic'
+gdf_korea_sido = gpd.read_file('sido.json')
 
-gdf_korea_sido = gpd.read_file('C:/vis/geodata/sido.json')
-
-df = pd.read_excel("C:/vis/disabledperson.xlsx")
-df2 = pd.read_excel("C:/vis/disabledperson2.xlsx")
-df3 = pd.read_excel("C:/vis/disabledperson3.xlsx")
-df4 = pd.read_excel("C:/vis/disabledperson4.xlsx")
-df5 = pd.read_excel("C:/vis/disabledperson5.xlsx")
-df6 = pd.read_excel("C:/vis/disabledperson6.xlsx")
+df = pd.read_excel("disabledperson.xlsx", engine='openpyxl')
+df2 = pd.read_excel("disabledperson2.xlsx", engine='openpyxl')
+df3 = pd.read_excel("disabledperson3.xlsx", engine='openpyxl')
+df4 = pd.read_excel("disabledperson4.xlsx", engine='openpyxl')
+df5 = pd.read_excel("disabledperson5.xlsx", engine='openpyxl')
+df6 = pd.read_excel("disabledperson6.xlsx", engine='openpyxl')
 
 korea_5179 = gdf_korea_sido.to_crs(epsg=5179,inplace=False)
 
