@@ -4,7 +4,7 @@ import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 
-import warning
+import warnings
 warnings.filterwarnings("ignore")
 
 gdf_korea_sido = gpd.read_file('sido.json')
