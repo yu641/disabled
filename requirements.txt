@@ -2,5 +2,5 @@ streamlit
 pandas
 geopandas
 matplotlib
-plotly.express
+plotly
 openpyxl
