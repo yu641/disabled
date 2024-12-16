@@ -31,7 +31,7 @@ ax = gdf_dp.plot(column='총장애인', cmap='Blues', legend=True, k=7)
 ax.set_axis_off()
 st.pyplot()
 
-st.title('')
+st.write('')
 
 
 st.header('시군구별 장애인 비율 [단위: %]')
@@ -41,3 +41,4 @@ ax.set_axis_off()
 plt.show()
 st.pyplot()
 
+st.caption('출처: KOSIS 시도별,장애유형별,성별 등록장애인수')
