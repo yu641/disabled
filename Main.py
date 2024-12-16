@@ -22,19 +22,19 @@ dp_rate=df[['장애인구비율']] #장애인구비율=장애인인구수/총인
 ###============장애인구 지도시각화============###
 st.title('장애인 인구 지도시각화')
 st.header('시군구별 장애인 인구 수 지도시각화 [단위: 명]')
-ax = plt.figure()
+
 gdf_dp=pd.concat([gdf_korea_sido, dp], axis=1) #시군구별 장애인 인구 수 지도시각화
-ax = gdf_dp.plot(column='총장애인', legend=True, k=7)
+ax = gdf_dp.plot(column='총장애인', cmap='Blues', legend=True, k=7)
 ax.set_axis_off()
-plt.show()
-st.map(gdf_dp)
+st.pyplot()
+
 st.title('')
+
 
 st.header('시군구별 장애인 비율 [단위: %]')
 gdf_dp_rate=pd.concat([gdf_korea_sido, dp_rate], axis=1) #시군구별 장애인 인구 비율 지도시각화
-ax = gdf_dp_rate.plot(column='장애인구비율', legend=True, cmap="Reds", k=7)
+ax = gdf_dp_rate.plot(column='장애인구비율', cmap='Blues', legend=True, k=7)
 ax.set_axis_off()
-ax.set_title("시군구별 장애인 비율 [단위:%]")
 plt.show()
-st.plotly_Chart(ax)
+st.pyplot()
 
