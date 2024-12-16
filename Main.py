@@ -4,6 +4,9 @@ import geopandas as gpd
 import pandas as pd
 import matplotlib.pyplot as plt
 
+import warning
+warnings.filterwarnings("ignore")
+
 gdf_korea_sido = gpd.read_file('sido.json')
 
 df = pd.read_excel("disabledperson.xlsx", engine='openpyxl')
@@ -32,10 +35,9 @@ st.title('')
 
 
 st.header('시군구별 장애인 비율 [단위: %]')
-fig, ax = plt.subplots()
 gdf_dp_rate=pd.concat([gdf_korea_sido, dp_rate], axis=1) #시군구별 장애인 인구 비율 지도시각화
 ax = gdf_dp_rate.plot(column='장애인구비율', cmap='Blues', legend=True, k=7)
 ax.set_axis_off()
 plt.show()
-st.pyplot(fig)
+st.pyplot()
 
