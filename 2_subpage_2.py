@@ -110,7 +110,6 @@ with tab_1:
         textposition = 'outside',
         textinfo = 'label+value+percent'
     )
-    fig.show()
     st.plotly_chart(fig)
 
 ## 지역별
@@ -124,7 +123,6 @@ with tab_2:
         y='지역별',
         orientation = 'h'
         ) # 지역별 경제활동상태 바차트
-    fig.show()
     st.plotly_chart(fig)
 
     st.write('지역별 경제활동 인구 비율')
@@ -133,7 +131,6 @@ with tab_2:
         x='지역별',
         y='경활률 (%)',
         ) # 지역별 경제활동인구비율
-    fig.show()
     st.plotly_chart(fig)
 
 ## 교육수준별
@@ -153,7 +150,7 @@ with tab_3:
     fig = px.bar(
         data_frame = df6,
         x='교육정도별',
-        y='경활률 (%)',
+        y='경활률 (%)'
         ) # 교육수준별 경제활동인구비율
     fig.show()
     st.plotly_chart(fig)
